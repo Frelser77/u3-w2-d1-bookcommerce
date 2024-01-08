@@ -95,7 +95,7 @@ const CommentsList = ({ comments, onDelete }) => (
 		{comments.map((comment) => (
 			<ListGroup.Item
 				className="d-flex flex-column align-items-center justify-content-center rounded gap-2"
-				key={comment.elementId + comment.comment + comment.rate}
+				key={comment.id}
 			>
 				<div className="fw-bold text-center">{comment.comment}</div>
 				<div className="fw-bold text-center">
