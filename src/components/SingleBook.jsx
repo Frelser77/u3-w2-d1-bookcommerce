@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import { Card, Col, Row } from "react-bootstrap";
 
 class SingleBook extends Component {
-	state = {
-		selected: false,
-	};
-
 	handleClick = () => {
 		this.props.onSelect(this.props.book);
 	};

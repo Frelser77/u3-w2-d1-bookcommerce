@@ -74,6 +74,7 @@ class CommentArea extends Component {
 	};
 	render() {
 		const { comments, isLoading, error } = this.state;
+		const { book } = this.props;
 		if (isLoading) {
 			return <Loading />;
 		}
@@ -81,7 +82,8 @@ class CommentArea extends Component {
 			return <Error message={error} />;
 		}
 		return (
-			<Col>
+			<Col className="commentArea">
+				<h5 className="fw-bold text-center my-2">Comments: {book ? book.title : "Select a book"}</h5>
 				<CommentsList comments={comments} onDelete={this.deleteComment} className="comment-section" />
 				<AddComment book={this.props.book} onCommentAdded={this.fetchComments} />
 			</Col>
@@ -91,7 +93,6 @@ class CommentArea extends Component {
 
 const CommentsList = ({ comments, onDelete }) => (
 	<ListGroup className="gap-1">
-		<h5 className="fw-bold text-center my-2">Comments</h5>
 		{comments.map((comment) => (
 			<ListGroup.Item
 				className="d-flex flex-column align-items-center justify-content-center rounded gap-2"

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import { AUTH_TOKEN, API_URL } from "./CommentArea";
+
 class AddComment extends Component {
 	state = {
 		comment: "",

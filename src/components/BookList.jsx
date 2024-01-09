@@ -76,8 +76,8 @@ class BookList extends Component {
 							))}
 						</Row>
 					</Col>
-					<Col md={4} className="my-auto">
-						{selectedBook ? <CommentArea book={selectedBook} /> : <div>Seleziona un libro per vedere i commenti.</div>}
+					<Col md={4} className="my-auto p-2">
+						{selectedBook ? <CommentArea book={selectedBook} /> : <div>Select a book to show comments.</div>}
 					</Col>
 				</Row>
 			</Container>
